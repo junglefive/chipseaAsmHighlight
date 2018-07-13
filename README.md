@@ -1,10 +1,10 @@
 # chipseaAssembly README
 
 
-## ¼ÇÂ¼
+## log
 
   first version.
 
-### °æ±¾v1.0.0
+## V0.0.3
 
-Initial release of chipsea assembly
+  Initial release of chipsea assembly

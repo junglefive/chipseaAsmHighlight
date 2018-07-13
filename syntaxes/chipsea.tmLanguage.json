@@ -137,7 +137,7 @@
 			"patterns": [
 				{
 					"name": "string.quoted.double.dcpub",
-					"match": "(?i)\\b($|if|define|ifndef|else|end|endif|org|equ|include|.+.asm)\\b"
+					"match": "(?i)\\b($|dw|if|define|ifndef|else|end|endif|org|equ|include|.+.asm)\\b"
 				},
 				{
 					"name": "string.quoted.double.dcpub",
