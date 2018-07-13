@@ -3,7 +3,7 @@
     "displayName": "ChipseaAssembly",
     "icon": "icon/icon.png",
     "description": "chipseaAssembly Highlight Support!",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "publisher": "junglefive",
     "engines": {
         "vscode": "^1.18.0"
