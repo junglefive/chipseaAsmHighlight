@@ -1,12 +1,21 @@
 {
     "name": "chipseaAssembly",
     "displayName": "ChipseaAssembly",
+    "icon": "icon/icon.png",
     "description": "chipseaAssembly Highlight Support!",
     "version": "0.0.1",
     "publisher": "junglefive",
     "engines": {
         "vscode": "^1.18.0"
     },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/junglefive/chipseaAsmHighlight"
+    },
+    "keywords": [
+        "chipsea",
+        "cs-asm"
+    ],
     "categories": [
         "Languages"
     ],
@@ -22,5 +31,6 @@
             "scopeName": "chipsea.asm",
             "path": "./syntaxes/chipsea.tmLanguage.json"
         }]
-    }
+    },
+    "homepage": "https://github.com/junglefive/chipseaAsmHighlight"
 }
