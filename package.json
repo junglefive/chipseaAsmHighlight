@@ -1,0 +1,26 @@
+{
+    "name": "chipseaAssembly",
+    "displayName": "ChipseaAssembly",
+    "description": "chipseaAssembly Highlight Support!",
+    "version": "0.0.1",
+    "publisher": "junglefive",
+    "engines": {
+        "vscode": "^1.18.0"
+    },
+    "categories": [
+        "Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "chipsea",
+            "aliases": ["chipseaAssembly", "chipsea"],
+            "extensions": [".asm",".inc",".ASM",".INC"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "chipsea",
+            "scopeName": "chipsea.asm",
+            "path": "./syntaxes/chipsea.tmLanguage.json"
+        }]
+    }
+}

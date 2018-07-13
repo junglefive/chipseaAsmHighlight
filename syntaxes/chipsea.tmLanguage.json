@@ -1,0 +1,170 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "chipseaAssembly",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		}
+		,
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#labels"
+		},
+		{
+			"include": "#operators"
+		},
+		{
+			"include": "#registers"
+		},
+		{
+			"include": "#mnemonics"
+		},
+		{
+			"include": "#methods"
+		},
+		{
+			"include": "#support"
+		},
+		{
+			"include": "#storage"
+		},
+		{
+			"include": "#numbers"
+		}
+		,
+		{
+			"include": "#constants"
+		}
+
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.chipsea",
+				"match": "(?i)\\b(addlw|addpcw|addwf|addwfc|andlw|andwf|bcf|bsf|btfsc|btfss|call|clrf|clrwdt|comf|daw|decf|decfsz|goto|halt|incf|incfsz|iorlw|iorwf|movfw|movlw|movp|movwf|nop|pop|push|retfie|retlw|return|rlf|rrf|sleep|sublw|subwf|subwfc|swapf|tblp|xorlw|xorwf|movlf|movff|movff2|movff3|movff4|movff5|movff6|sublf|subff|subff2|subff3|subff4|subff5|subff6|addlf|addff|addff2|addff3|addff4|addff5|addff6|clrf2|clrf3|clrf4|clrf5|clrf6|rlf2|rlf3|rlf4|rlf5|rlf6|rrf2|rrf3|rrf4|rrf5|rrf6|addfff3|subfff3|jz|jnz|jc|jnc|jb|jnb|je|jne)\\b"
+			}]
+		},
+		"storage": {
+			"patterns": [{
+				"name": "support.class.chipsea",
+				"match": "(?i)\\b(INS0|INS1|INS2|TMEN|TRST|LEDEN|CONT_SEL|IND0|IND1|FSR0|FSR1|STATUS|WORK|INTF|INTE|BSR|EADRH|EADRL|EDAT|EOPEN|WDTCON|WDTIN|TMOUT|TMCON|ADOH|ADOL|ADOLL|ADCON|MCK|PCK|MCK2|NETA|NETB|NETC|NETD|NETE|NETF|SVD|PT1|PT1EN|PT1PU|PT1CON|AIENB|PT2|PT2EN|PT2PU|PT4|PT4EN|PT4PU|PT2MR|PT2CON|PTINT|INTF2|INTE2|AIENB|PT2|PT2EN|PT2PU|PT4|PT4EN|PT4PU|PT2MR|PT2CON|PTINT|INTF2|INTE2|LCD1|LCD2|LCD3|LCD4|LCD5|LCD6|LCD7|LCD8|LCD9|LCD10|LCD11|LCD12|lcd13|LCD14|LCD15|LCD16|LCD17|LCD18|LCD19|LCD20|LCD21|LCD22|LCD23|LCD24|LCD25|LCD26|LCD27|LCD28|LCD29|LCD30|LCD31|LCD32|LCD33|LCD34|LCD35|LCD36|LCD37|LCD38|LCD39|LCD40|LCD41|LCD42|LCD43|LCD44|LCD45|LCD46|LCD47|LCD48|LCD49|LCD50|LCD51|LCD52|LCD53|LCD54|LCD55|LCD56|LCD57|LCD58|LCD59|LCD60|LCD61|LCD62|LCD63|LCD64|LCD65|LCD66|LCD67|LCD68|LCD69|LCD70|LCD71|LED1|LED2|LED3|LED4|LED5|LED6|LED7|LED8|LED9|LED10|LED11|LED12|LED14|LED14|LEDCON1|LEDCON2|CHPCON|AD2OH|AD2OL|LCDCN1|LCDENR|TEMPC|WDT_C|IOSC_C|TEST|SCON1|SCON2|SBUF|AIENB|RTCCON|RTCAER|RTCYEAR|RTCMON|RTCDAY|RTCHOUR|RTCMIN|RTCSEC|RTCDWR|INTEGER|FRACTION|RTCCON|RTCAER|RTCYEAR|RTCMON|RTCDAY|RTCHOUR|RTCMIN|RTCSEC|RTCDWR|INTEGER|FRACTION|Z|C|DC|TO|PD|E0IF|E1IF|ADIF|TMIF|AD2IF|TM0IF|TM1IF|E0IE|E1IE|ADIE|TMIE|GIE|AD2IE|TM0IE|TM1IE|PAGE0|PAGE1|WDTS0|WDTS1|WDTS2|WDTS3|Wdt_lcd|WDTEN|WDTS_0|WDTS_1|WDTS_2|IRP1|IRP0|E0IF|E1IF|ADIF|TMIF|AD2IF|TM0IF|TM1IF|M1_CK|M2_CK|S_BEEP0|S_BEEP1|LCDSCKS0|LCDSCKS1|LCDSCKS2|LCDSCKS3|CLK_SEL|M3_CK|EO_SLP|CST_IN|CST_E|XTALSEL|TMSEL0|TMSEL1|CHPCKS0|CHPCKS1|CHPCKS2|CM_SEL|SINL_0|SINL_1|ACM|SINL0|SINL1|ADEN|ADG0|ADG_0|ADG_1|ADG1|ADG_M0|ADG_M1|CHOPM0|CHOPM1|CHOPM_0|CHOPM_1|ERV|LCDREF0|LCDREF1|VLCDX0|VLCDX1|Level_s|LCDCH|ENLB|SILB0|SILB1|SILB2|LDOS0|LDOS1|LB_RST_CON|SILB_0|SILB_1|SILB_2|LDOS_0|LDOS_1|ENVB|BGID0|BGID1|BGID2|BGID3|ENVDDA|LDOEN|LVR_EN|CHP_VPP|AIENB1|AIENB2|AIENB3|LBOUT|E0M0|E0M1|E1M0|E1M1|E0M_0|E0M_1|E1M_0|E1M_1|BZEN|BZSEL|SEGCON0|SEGCON1|PTW0_0|PTW0_1|PTW0_2|PTW1_0|PTW1_1|PTW1_2|PTW1_3|URRIF|URTIF|RTCIF|URRIE|URTIE|RTCIE|T0SEL|T0RSTB|T0RATE_0|T0RATE_1|T0RATE_2|T0EN|PWM1OUT|T1OUT|T1RSTB|T1CKS|T1RATE_0|T1RATE_1|T1RATE_2|T1EN|LED_PMODE|LEDCLKS_0|LEDCLKS_1|LED_DUTY0|LED_DUTY1|LED_DUTY2|LED_Current0|LED_Current1|LED_Current2LEDEN|CONT_SEL|CSE_LCD|CHPEN|CHPCLKS_0|CHPCLKS_1|CHPCLKS_2|CHPVS|AD2EN|RTCEN|H_24_12|LIR|DWR_0|DWR_1|DWR_2|ENPMPL|LCD_DUTY0|LCD_DUTY1|LEVEL|LCDWS|LCDEN|LCDCKS0|LCDCKS1|WDT_C1|WDT_C2|WDT_C3|UARTEN|UR0_RNIE|UART_SEL|RB8|TB8|REN|SM2|SM1|SM0|SMOD|W|F)\\b"
+				}]
+		},
+		"support": {
+			"patterns": [{
+				"name": "support.class.chipsea",
+				"match": "(?i)\\b(ADM0|ADM1|ADM2|ADSC|ADM_0|ADM_1|ADM_2|GC_EN|STOP_ERR|RXOV_ERR|TX_BUSY|RX_BUSY|TM2IF|TM2IE|ick_ldo_by|ECK_EN|WDT_CLK_EN|ICK_EN|PROG_BUSY|READ_CHECK|ROOT_EN|I2C_DIV_1|I2C_DIV_0|UART1DIV_2|UART1DIV_1|UART1DIV_0|UART0DIV_2|UART0DIV_1|UART0DIV_0|S_BEEP_1|S_BEEP_0|F_GAIN_1|F_GAIN_0|S_GAIN_1|S_GAIN_0|R_GAIN|BGR_ENB|BGID|AD2START|AD3_SL_3|AD3_SL_2|AD3_SL_1|AD3_SL_0|AD2O_9|AD2O_8|LVDEN|AD2_REF|SMT5_EN|SMT2_EN|SMT1_EN|PT15_VDD|PT14_VDD|I2C_VDD|PWM3_SEL|PWM2_SEL|PWM1_SEL|UR1_RHIF|UR1_RNIF|UR1_THIF|UR1_TEIF|UR0_RHIF|UR0_RNIF|UR0_THIF|UR0_TEIF|UR1_RHIE|UR1_RNIE|UR1_THIE|UR1_TEIE|UR0_RHIE|UR0_RNIE|UR0_THIE|UR0_TEIE|T0SEL_1|T0SEL_0|T2EN|T2RATE_2|T2RATE_1|T2RATE_0|T2CKS|T2RSTB|T2OUT|PWM2OUT|T3EN|T3RATE_2|T3RATE_1|T3RATE_0|T3SEL|T3RSTB|T3OUT|PWM3OUT|LCDFC_1|LCDFC_0|VLCDX_1|VLCDX_0|LCDSCKS_3|LCDSCKS_2|LCDSCKS_1|LCDSCKS_0|LCDFR|LCDREF_2|LCDREF_1|LCDREF_0|LCDCKS_1|LCDCKS_0|LCD_DUTY_1|LCD_DUTY_0|I2C_TIF|I2C_RIF|UR0ERR_IF|UR1WK_IF|UR0WK_IF|TM3IF|SPIIF|I2C_TIE|I2C_RIE|UR0ERR_IE|UR1WK_IE|UR0WK_IE|TM3IE|SPIIE|SPIEN|MSTEN|CKPHA|CKPOL|MULMST|WIREMOD|SPIBSY|SPIRST|SLVSEL|WCOL|MODCOL|RFU|HR_24_12|INTEGER_3|INTEGER_2|INTEGER_1|INTEGER_0|TEN_YEAR_3|TEN_YEAR_2|TEN_YEAR_1|TEN_YEAR_0|ONE_YEAR_3|ONE_YEAR_2|ONE_YEAR_1|ONE_YEAR_0|TEN_MON|ONE_MON_3|ONE_MON_2|ONE_MON_1|ONE_MON_0|TEN_DAY_1|TEN_DAY_0|ONE_DAY_3|ONE_DAY_2|ONE_DAY_1|ONE_DAY_0|AM_PM|TEN_HOUR_1|TEN_HOUR_0|ONE_HOUR_3|ONE_HOUR_2|ONE_HOUR_1|ONE_HOUR_0|TEN_MIN_2|TEN_MIN_1|TEN_MIN_0|ONE_MIN_3|ONE_MIN_2|ONE_MIN_1|ONE_MIN_0|TEN_SEC_2|TEN_SEC_1|TEN_SEC_0|ONE_SEC_3|ONE_SEC_2|ONE_SEC_1|ONE_SEC_0|I2C_EN|AWK_EN|CST_EN|ACK_EN|I2CSTUS_3|I2CSTUS_2|I2CSTUS_1|I2CSTUS_0|TMOD_1|TMOD_0|ICK_SEL_1|ICK_SEL_0|WDT_TRIM_3|WDT_TRIM_2|WDT_TRIM_1|WDT_TRIM_0|sim_rst|LVD_TRIM_2|LVD_TRIM_1|LVD_TRIM_0|VS_TRIM_3|VS_TRIM_2|VS_TRIM_1|VS_TRIM_0|TX9D|RX9D|TX9_EN|RX9_EN|RX_EN|TX_EN|UART_EN|RXF_WATER_LEVEL_2|RXF_WATER_LEVEL_1|RXF_WATER_LEVEL_0|TXF_WATER_LEVEL_2|TXF_WATER_LEVEL_1|TXF_WATER_LEVEL_0)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.chipsea",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.chipsea",
+					"match": "\\\\."
+				}
+			]
+		},
+		"methods": {
+			"patterns": [
+				{
+					"name": "support.function",
+					"match": "(?i)\\b([FL]_[(\\w|[_$#@~\\.?])]*)\\b"
+				},
+				{
+					"name": "variable.language",
+					"match": "(?i)\\b([C]_[(\\w|[_$#@~\\.?])]*)\\b"
+				}
+				,
+				{
+					"name": "variable.language",
+					"match": "(?i)\\b([R]_[(\\w|[_$#@~\\.?])]*)\\b"
+				}
+				,
+				{
+					"name": "entity.name.constant",
+					"match": "(?i)\\b([M]_[(\\w|[_$#@~\\.?])]*)\\b"
+				}
+				,
+				{
+					"name": "variable.language",
+					"match": "(?i)\\b([B]_[(\\w|[_$#@~\\.?])]*)\\b"
+				}
+			]
+		},
+		"comments": {
+			"patterns": [
+				{
+					"comment": "EOL Comments",
+					"name": "comment.line",
+					"match": ";.*$"
+				},
+				{
+					"comment": "Preprocessor",
+					"name": "comment.line",
+					"match": "//.*$"
+				}
+			]
+		},
+		"numbers": {
+			"patterns": [
+				{
+					"name": "constant.numeric",
+					"match": "(?i)\\b\\d+\\b"
+				},
+				{
+					"name": "constant.numeric.hex",
+					"match": "(?i)\\b0x[0-9A-Fa-f]+\\b"
+				},
+				{
+					"name": "constant.numeric.bin",
+					"match": "(?i)\\b[01]+b+\\b"
+				},
+				{
+					"name": "constant.numeric.hex",
+					"match": "(?i)\\b([0-9a-fA-F]+[hH]|0x[0-9a-fA-F]+)\\b"
+				}
+			]
+		},
+		"mnemonics":{
+			"patterns": [
+				{
+					"name": "string.quoted.double.dcpub",
+					"match": "(?i)\\b($|if|define|ifndef|else|end|endif|org|equ|include|.+.asm)\\b"
+				},
+				{
+					"name": "string.quoted.double.dcpub",
+					"match": "(?i)\\b(section|ram|rom|public|extern)\\b"
+				},
+				{
+					"name": "string.quoted.double.dcpub",
+					"match": "(?i)(\\$|\\+|\\#)"
+				}
+			]
+		},
+		"labels": {
+			"patterns": [
+				{
+					"name": "support.type",
+					"match": "\\.?\\w+:"
+				},
+				{
+					"name": "support.type",
+					"match": ":\\w+"
+				},
+				{
+					"name": "markup.heading",
+					"match": "\\..+?\\b"
+				}
+			]
+		}
+	},
+	"scopeName": "chipsea.asm"
+}
