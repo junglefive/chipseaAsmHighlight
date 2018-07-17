@@ -1,13 +1,17 @@
 {
-    "name": "chipseaAssembly",
-    "displayName": "ChipseaAssembly",
+    "name": "chipsea",
+    "displayName": "chipsea",
     "icon": "icon/icon.png",
-    "description": "chipseaAssembly Highlight Support!",
-    "version": "0.0.3",
+    "description": "chipsea assembly highlight Support!",
+    "version": "0.0.4",
     "publisher": "junglefive",
     "engines": {
-        "vscode": "^1.18.0"
+        "vscode": "^1.25.0"
     },
+    "activationEvents": [
+        "onCommand:extension.sayHello"
+    ],
+    "main": "./out/extension",
     "repository": {
         "type": "git",
         "url": "https://github.com/junglefive/chipseaAsmHighlight"
@@ -17,12 +21,12 @@
         "cs-asm"
     ],
     "categories": [
-        "Languages"
+        "Programming Languages"
     ],
     "contributes": {
         "languages": [{
             "id": "chipsea",
-            "aliases": ["chipseaAssembly", "chipsea"],
+            "aliases": ["chipsea", "chipsea_asm"],
             "extensions": [".asm",".inc",".ASM",".INC"],
             "configuration": "./language-configuration.json"
         }],
@@ -30,7 +34,48 @@
             "language": "chipsea",
             "scopeName": "chipsea.asm",
             "path": "./syntaxes/chipsea.tmLanguage.json"
-        }]
+        }],
+        "snippets": [
+            {
+                "language": "chipsea",
+                "path": "./snippets/snippets.json"
+            }
+        ],
+        "commands":[
+            {
+                "command": "extension.sayHello",
+                "title": "Hello World"
+            }
+        ],
+        "keybindings":[
+            {
+                "command": "extension.sayHello",
+                "key": "ctrl+shift+h"
+            }
+        ],
+        "menus": {
+            "editor/context": [
+               {
+                   "when": "resourceLangId == chipsea",
+                   "command": "extension.sayHello",
+                   "group": "navigation"
+               }
+            ]
+        }
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "npm run compile && node ./node_modules/vscode/bin/test",
+        "tslint": "tslint -c tslint.json src/extension.ts"
+    },
+    "devDependencies": {
+        "typescript": "^2.6.1",
+        "vscode": "^1.1.6",
+        "@types/node": "^7.0.43",
+        "@types/mocha": "^2.2.42"
     },
     "homepage": "https://github.com/junglefive/chipseaAsmHighlight"
 }
