@@ -1,5 +1,5 @@
 {
-	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"$schema": "https://github.com/junglefive/chipseaAsmHighlight/syntaces/chipsea.tmlanuage.json",
 	"name": "chipseaAssembly",
 	"patterns": [
 		{
@@ -40,13 +40,17 @@
 		{
 			"include": "#constants"
 		}
+		,
+		{
+			"include": "#functions"
+		}
 
 	],
 	"repository": {
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.chipsea",
-				"match": "(?i)\\b(addlw|addpcw|addwf|addwfc|andlw|andwf|bcf|bsf|btfsc|btfss|call|clrf|clrwdt|comf|daw|decf|decfsz|goto|halt|incf|incfsz|iorlw|iorwf|movfw|movlw|movp|movwf|nop|pop|push|retfie|retlw|return|rlf|rrf|sleep|sublw|subwf|subwfc|swapf|tblp|xorlw|xorwf|movlf|movff|movff2|movff3|movff4|movff5|movff6|sublf|subff|subff2|subff3|subff4|subff5|subff6|addlf|addff|addff2|addff3|addff4|addff5|addff6|clrf2|clrf3|clrf4|clrf5|clrf6|rlf2|rlf3|rlf4|rlf5|rlf6|rrf2|rrf3|rrf4|rrf5|rrf6|addfff3|subfff3|jz|jnz|jc|jnc|jb|jnb|je|jne)\\b"
+				"match": "(?i)\\b(addlw|addpcw|addwf|addwfc|andlw|andwf|bcf|bsf|btfsc|btfss|call|clrf|clrwdt|comf|daw|decf|decfsz|goto|halt|incf|incfsz|iorlw|iorwf|movfw|movlw|movp|movwf|nop|pop|push|retfie|retlw|return|rlf|rrf|sleep|sublw|subwf|subwfc|swapf|tblp|xorlw|xorwf|movfl|movlf|movff|movff2|movff3|movff4|movff5|movff6|sublf|subff|subff2|subff3|subff4|subff5|subff6|addlf|addff|addff2|addff3|addff4|addff5|addff6|clrf2|clrf3|clrf4|clrf5|clrf6|rlf2|rlf3|rlf4|rlf5|rlf6|rrf2|rrf3|rrf4|rrf5|rrf6|addfff3|subfff3|jz|jnz|jc|jnc|jb|jnb|je|jne)\\b"
 			}]
 		},
 		"storage": {
@@ -79,7 +83,7 @@
 					"match": "(?i)\\b([FL]_[(\\w|[_$#@~\\.?])]*)\\b"
 				},
 				{
-					"name": "variable.language",
+					"name": "support.constant",
 					"match": "(?i)\\b([C]_[(\\w|[_$#@~\\.?])]*)\\b"
 				}
 				,
@@ -89,13 +93,18 @@
 				}
 				,
 				{
-					"name": "entity.name.constant",
+					"name": "support.constant",
 					"match": "(?i)\\b([M]_[(\\w|[_$#@~\\.?])]*)\\b"
 				}
 				,
 				{
-					"name": "variable.language",
+					"name": "variable.parameter",
 					"match": "(?i)\\b([B]_[(\\w|[_$#@~\\.?])]*)\\b"
+				}
+				,
+				{
+					"name": "support.function",
+					"match": "(?i)\\b(CS_[(\\w|[_$#@~\\.?])]*)\\b"
 				}
 			]
 		},
@@ -110,6 +119,12 @@
 					"comment": "Preprocessor",
 					"name": "comment.line",
 					"match": "//.*$"
+				},
+				{
+					"comment": "Preprocessor",
+					"name": "comment.block",
+					"begin":"/\\*",
+					"end":"\\*/"
 				}
 			]
 		},
