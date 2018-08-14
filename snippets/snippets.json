@@ -1,10 +1,27 @@
 {
-     "Print to console": {
-        "prefix":"print",
+     "Comment File": {
+        "prefix":"cs file header",
         "body":[
-            "console.log('$1');"
+        "/*---------------------------------------------------------------------\n Filename: ${TM_FILENAME}\n Describe:FIXME: \n fuctionchip    : FIXME:\n Author  :FIXME:\n Version : none\n Date    : ${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}\n---------------------------------------------------------------------*/"
+    ,"$2"
         ],
-        "description":"Log output to console"
+        "description":"chipsea comments file header"
+    },
+    "Comment Line": {
+        "prefix": "cs comment line",
+        "body": [
+            ";----------------------------------------------------------------------"
+            ,"$2"
+        ],
+        "description": "chipsea comments line"
+    },
+    "Comment Function": {
+        "prefix": "cs comment function",
+        "body": [
+        "/*---------------------------------------------------------------------\n name    : TODO: \n Describe: TODO: \n ----------------------------------------------------------------------\n Input   : None \n Output  : None \n Temp    : None \n Log     : none\n ----------------------------------------------------------------------\n e.g:\n TODO: \n ---------------------------------------------------------------------*/"
+        ,"$2"
+        ],
+        "description": "chipsea comments function"
     }
 }
 

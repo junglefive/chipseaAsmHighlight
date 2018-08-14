@@ -54,10 +54,16 @@
 			}]
 		},
 		"storage": {
-			"patterns": [{
+			"patterns": [
+				{
 				"name": "support.class.chipsea",
 				"match": "(?i)\\b(INS0|INS1|INS2|TMEN|TRST|LEDEN|CONT_SEL|IND0|IND1|FSR0|FSR1|STATUS|WORK|INTF|INTE|BSR|EADRH|EADRL|EDAT|EOPEN|WDTCON|WDTIN|TMOUT|TMCON|ADOH|ADOL|ADOLL|ADCON|MCK|PCK|MCK2|NETA|NETB|NETC|NETD|NETE|NETF|SVD|PT1|PT1EN|PT1PU|PT1CON|AIENB|PT2|PT2EN|PT2PU|PT4|PT4EN|PT4PU|PT2MR|PT2CON|PTINT|INTF2|INTE2|AIENB|PT2|PT2EN|PT2PU|PT4|PT4EN|PT4PU|PT2MR|PT2CON|PTINT|INTF2|INTE2|LCD1|LCD2|LCD3|LCD4|LCD5|LCD6|LCD7|LCD8|LCD9|LCD10|LCD11|LCD12|lcd13|LCD14|LCD15|LCD16|LCD17|LCD18|LCD19|LCD20|LCD21|LCD22|LCD23|LCD24|LCD25|LCD26|LCD27|LCD28|LCD29|LCD30|LCD31|LCD32|LCD33|LCD34|LCD35|LCD36|LCD37|LCD38|LCD39|LCD40|LCD41|LCD42|LCD43|LCD44|LCD45|LCD46|LCD47|LCD48|LCD49|LCD50|LCD51|LCD52|LCD53|LCD54|LCD55|LCD56|LCD57|LCD58|LCD59|LCD60|LCD61|LCD62|LCD63|LCD64|LCD65|LCD66|LCD67|LCD68|LCD69|LCD70|LCD71|LED1|LED2|LED3|LED4|LED5|LED6|LED7|LED8|LED9|LED10|LED11|LED12|LED14|LED14|LEDCON1|LEDCON2|CHPCON|AD2OH|AD2OL|LCDCN1|LCDENR|TEMPC|WDT_C|IOSC_C|TEST|SCON1|SCON2|SBUF|AIENB|RTCCON|RTCAER|RTCYEAR|RTCMON|RTCDAY|RTCHOUR|RTCMIN|RTCSEC|RTCDWR|INTEGER|FRACTION|RTCCON|RTCAER|RTCYEAR|RTCMON|RTCDAY|RTCHOUR|RTCMIN|RTCSEC|RTCDWR|INTEGER|FRACTION|Z|C|DC|TO|PD|E0IF|E1IF|ADIF|TMIF|AD2IF|TM0IF|TM1IF|E0IE|E1IE|ADIE|TMIE|GIE|AD2IE|TM0IE|TM1IE|PAGE0|PAGE1|WDTS0|WDTS1|WDTS2|WDTS3|Wdt_lcd|WDTEN|WDTS_0|WDTS_1|WDTS_2|IRP1|IRP0|E0IF|E1IF|ADIF|TMIF|AD2IF|TM0IF|TM1IF|M1_CK|M2_CK|S_BEEP0|S_BEEP1|LCDSCKS0|LCDSCKS1|LCDSCKS2|LCDSCKS3|CLK_SEL|M3_CK|EO_SLP|CST_IN|CST_E|XTALSEL|TMSEL0|TMSEL1|CHPCKS0|CHPCKS1|CHPCKS2|CM_SEL|SINL_0|SINL_1|ACM|SINL0|SINL1|ADEN|ADG0|ADG_0|ADG_1|ADG1|ADG_M0|ADG_M1|CHOPM0|CHOPM1|CHOPM_0|CHOPM_1|ERV|LCDREF0|LCDREF1|VLCDX0|VLCDX1|Level_s|LCDCH|ENLB|SILB0|SILB1|SILB2|LDOS0|LDOS1|LB_RST_CON|SILB_0|SILB_1|SILB_2|LDOS_0|LDOS_1|ENVB|BGID0|BGID1|BGID2|BGID3|ENVDDA|LDOEN|LVR_EN|CHP_VPP|AIENB1|AIENB2|AIENB3|LBOUT|E0M0|E0M1|E1M0|E1M1|E0M_0|E0M_1|E1M_0|E1M_1|BZEN|BZSEL|SEGCON0|SEGCON1|PTW0_0|PTW0_1|PTW0_2|PTW1_0|PTW1_1|PTW1_2|PTW1_3|URRIF|URTIF|RTCIF|URRIE|URTIE|RTCIE|T0SEL|T0RSTB|T0RATE_0|T0RATE_1|T0RATE_2|T0EN|PWM1OUT|T1OUT|T1RSTB|T1CKS|T1RATE_0|T1RATE_1|T1RATE_2|T1EN|LED_PMODE|LEDCLKS_0|LEDCLKS_1|LED_DUTY0|LED_DUTY1|LED_DUTY2|LED_Current0|LED_Current1|LED_Current2LEDEN|CONT_SEL|CSE_LCD|CHPEN|CHPCLKS_0|CHPCLKS_1|CHPCLKS_2|CHPVS|AD2EN|RTCEN|H_24_12|LIR|DWR_0|DWR_1|DWR_2|ENPMPL|LCD_DUTY0|LCD_DUTY1|LEVEL|LCDWS|LCDEN|LCDCKS0|LCDCKS1|WDT_C1|WDT_C2|WDT_C3|UARTEN|UR0_RNIE|UART_SEL|RB8|TB8|REN|SM2|SM1|SM0|SMOD|W|F)\\b"
-				}]
+				},
+				{
+				"name": "support.class.chipsea",
+				"match": "(?i)\\b(SPICN|SPIDAT|SPICFG|SPICKR)\\b"
+				}
+			]
 		},
 		"support": {
 			"patterns": [{
@@ -95,6 +101,26 @@
 				{
 					"name": "support.constant",
 					"match": "(?i)\\b([M]_[(\\w|[_$#@~\\.?])]*)\\b"
+				}
+				,
+				{
+					"name": "support.constant",
+					"match": "(?i)\\b(PRE_[(\\w|[_$#@~\\.?])]*)\\b"
+				}
+				,
+				{
+					"name": "support.constant",
+					"match": "(?i)\\b(CMPL_[(\\w|[_$#@~\\.?])]*)\\b"
+				}
+				,
+				{
+					"name": "support.constant",
+					"match": "(?i)\\b([P]_[(\\w|[_$#@~\\.?])]*)\\b"
+				}
+				,
+				{
+					"name": "support.constant",
+					"match": "(?i)\\b(CSCC_[(\\w|[_$#@~\\.?])]*)\\b"
 				}
 				,
 				{
@@ -140,7 +166,11 @@
 				},
 				{
 					"name": "constant.numeric.bin",
-					"match": "(?i)\\b[01]+b+\\b"
+					"match": "(?i)\\b([01]+b)\\b"
+				},
+				{
+					"name": "constant.numeric.bin",
+					"match": "(?i)\\b(0b[01]+)\\b"
 				},
 				{
 					"name": "constant.numeric.hex",
@@ -152,15 +182,15 @@
 			"patterns": [
 				{
 					"name": "string.quoted.double.dcpub",
-					"match": "(?i)\\b($|ds|dw|bank0|bank1|bank2|bank3|bank4|bank5|bank6|bank7|dw|if|define|ifndef|else|end|endif|org|equ|include|.+.asm)\\b"
+					"match": "(?i)\\b($|ds|dw|bank0|bank1|bank2|bank3|bank4|bank5|bank6|bank7|dw|if|define|ifndef|else|end|endif|org|equ|include)\\b"
 				},
 				{
 					"name": "string.quoted.double.dcpub",
-					"match": "(?i)\\b(bakisel|banksel|bitdefine|text|data|db|#define|ds|dw|dt|else|end|endif|endm|ends|section|endw|while|equ|exitm|error|extrtn|global|section|if|ifdef|ifndef|#include|macro|local|org|#undefine|warnning|while)\\b"
+					"match": "(?i)\\b(bakisel|banksel|bitdefine|text|data|db|#define|ds|dw|dt|else|end|endif|endm|ends|section|endw|while|equ|exitm|error|extrtn|global|section|if|ifdef|ifndef|#include|macro|local|org|#undefine|warnning|while|addr|high|low)\\b"
 				},
 				{
 					"name": "string.quoted.double.dcpub",
-					"match": "(?i)\\b(section|ram|rom|public|extern)\\b"
+					"match": "(?i)\\b(section|ram|rom|public|extern|db|del|#|text|data)\\b"
 				},
 				{
 					"name": "string.quoted.double.dcpub",
