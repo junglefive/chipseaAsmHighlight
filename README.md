@@ -33,3 +33,7 @@
 ## v0.1.0
 
 - add chipsea theme
+
+## v0.1.1
+
+- update theme  colors

@@ -105,7 +105,7 @@
 		"methods": {
 			"patterns": [
 				{
-					"name": "keyword.other.special-method",
+					"name": "support.function.any-method",
 					"match": "(?i)\\b([L]_[(\\w|[_$#@~\\.?])]*)\\b"
 				},
 				{
@@ -144,7 +144,7 @@
 				}
 				,
 				{
-					"name": "variable",
+					"name": "entity.name.tag",
 					"match": "(?i)\\b([B]_[(\\w|[_$#@~\\.?])]*)\\b"
 				}
 				,
