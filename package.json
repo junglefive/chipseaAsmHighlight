@@ -3,7 +3,7 @@
     "displayName": "chipsea",
     "icon": "icon/icon.png",
     "description": "chipsea assembly highlight Support!",
-    "version": "0.0.8",
+    "version": "0.1.0",
     "publisher": "junglefive",
     "engines": {
         "vscode": "^1.25.0"
@@ -52,6 +52,13 @@
                 "command": "extension.sayHello",
                 "key": "ctrl+shift+h"
             }
+        ],
+        "themes": [
+             {
+                "label": "chipsea",
+                "uiTheme": "vs-dark",
+                "path": "./themes/One Dark.tmTheme"
+             }
         ],
         "menus": {
             "editor/context": [

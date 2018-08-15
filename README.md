@@ -23,9 +23,13 @@
 
 ## v0.0.7
 
-- add `P_`¡¢`CSCC_`,`PRE_`.. highlight
+- add `P_`,`CSCC_`,`PRE_`.. highlight
 - add `snippets`support`cs comment ....`
 
 ## v0.0.8
 
 - fixed comment bug
+
+## v0.1.0
+
+- add chipsea theme
