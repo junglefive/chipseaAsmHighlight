@@ -37,3 +37,7 @@
 ## v0.1.1
 
 - update theme  colors
+
+## v0.1.2
+
+- modify keyword and F_XXX：color
