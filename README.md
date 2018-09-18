@@ -41,3 +41,12 @@
 ## v0.1.2
 
 - modify keyword and F_XXX：color
+
+## v0.1.3
+
+- fix bugs
+
+## v0.1.4
+
+- add "TRUE/FALSE"
+- "F_XX" highlight

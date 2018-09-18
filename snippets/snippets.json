@@ -2,7 +2,7 @@
      "Comment File": {
         "prefix":"cs comment file header",
         "body":[
-        "/*---------------------------------------------------------------------\n Filename: ${TM_FILENAME}\n Describe: FIXME: \n fuction : FIXME: \n chip    : FIXME: \n Author  : FIXME:\n Version : none\n Date    : ${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}\n---------------------------------------------------------------------*/"
+        "/*---------------------------------------------------------------------\n Filename: ${TM_FILENAME}\n Describe: FIXME: \n chip    : FIXME: \n Author  : FIXME:\n Version : none\n Date    : ${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}\n---------------------------------------------------------------------*/"
     ,"$2"
         ],
         "description":"chipsea comments file header"
@@ -18,7 +18,7 @@
     "Comment Function": {
         "prefix": "cs comment function",
         "body": [
-        "/*---------------------------------------------------------------------\n name    : TODO: \n Describe: TODO: \n ----------------------------------------------------------------------\n Input   : None \n Output  : None \n Temp    : None \n Log     : none\n ----------------------------------------------------------------------\n e.g:\n TODO: \n ---------------------------------------------------------------------*/"
+        "/*---------------------------------------------------------------------\n name    : TODO: \n Describe: TODO: \n ----------------------------------------------------------------------\n Input   : FIXME: \n Output  : FIXME: \n ---------------------------------------------------------------------*/"
         ,"$2"
         ],
         "description": "chipsea comment function"

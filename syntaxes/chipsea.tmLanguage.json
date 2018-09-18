@@ -111,6 +111,10 @@
 		"methods": {
 			"patterns": [
 				{
+					"name": "keyword.other.special-method",
+					"match": "(?i)\\b([F]_[(\\w|[_$#@~\\.?])]*)\\b"
+				},
+				{
 					"name": "support.function.any-method",
 					"match": "(?i)\\b([L]_[(\\w|[_$#@~\\.?])]*)\\b"
 				},
@@ -185,6 +189,10 @@
 				{
 					"name": "constant.numeric",
 					"match": "(?i)\\b\\d+\\b"
+				},
+				{
+					"name": "constant.numeric",
+					"match": "\\b(TRUE|FALSE)\\b"
 				},
 				{
 					"name": "constant.numeric",
